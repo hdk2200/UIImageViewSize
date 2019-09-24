@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIImageViewSize" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePortrait" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-FU-MeA">
+                                <rect key="frame" x="24" y="353" width="366" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="zcX-be-erh"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-BX-Dy6" userLabel="buttonView">
+                                <rect key="frame" x="358" y="321" width="32" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIm-Fe-Sbx">
+                                        <rect key="frame" x="1" y="1" width="30" height="30"/>
+                                        <state key="normal" title="❎"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="8r8-Tt-24H"/>
+                                    <constraint firstItem="zIm-Fe-Sbx" firstAttribute="centerX" secondItem="QB9-BX-Dy6" secondAttribute="centerX" id="TnH-Gk-btY"/>
+                                    <constraint firstAttribute="height" constant="32" id="YGn-HJ-Qh9"/>
+                                    <constraint firstItem="zIm-Fe-Sbx" firstAttribute="centerY" secondItem="QB9-BX-Dy6" secondAttribute="centerY" id="cqB-dx-v1m"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-Li-K3o">
+                                <rect key="frame" x="120.5" y="96" width="173" height="32"/>
+                                <segments>
+                                    <segment title="Portrait"/>
+                                    <segment title="Landscape"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="fb7-MM-oRK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gwe-FU-MeA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="2Az-c5-8sB"/>
+                            <constraint firstItem="gwe-FU-MeA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EO4-1B-GTa"/>
+                            <constraint firstItem="KDa-Li-K3o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ad4-Tl-nhV"/>
+                            <constraint firstItem="gwe-FU-MeA" firstAttribute="top" secondItem="QB9-BX-Dy6" secondAttribute="bottom" id="ayM-Yo-cY4"/>
+                            <constraint firstItem="QB9-BX-Dy6" firstAttribute="trailing" secondItem="gwe-FU-MeA" secondAttribute="trailing" id="hGy-Bj-DSH"/>
+                            <constraint firstItem="KDa-Li-K3o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="tVl-EG-OLv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gwe-FU-MeA" secondAttribute="trailing" constant="24" id="yX3-dl-q9u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="gwe-FU-MeA" id="uuA-5a-wCR"/>
+                        <outlet property="imageViewHeight" destination="zcX-be-erh" id="M2I-is-kIp"/>
+                        <outlet property="segment" destination="KDa-Li-K3o" id="nt3-Cg-qke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imagePortrait" width="1280" height="1920"/>
+    </resources>
+</document>
